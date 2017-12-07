@@ -2,7 +2,7 @@ from PIL import Image
 
 arr_fon = []
 arr_countour =[]
-def Backward():
+def backward():
     p_s = p_active = search_start_p()
     p_n1 = search_clockwise(p_s)
     p_n2 = search_conter_clockwise(p_s)
