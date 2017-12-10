@@ -53,7 +53,7 @@ class BackwardBoundaryTracing:
     def search_start_p(self, width, height, pixels):
         for i in range(width):
             for j in range(height):
-                if pixels[i, j] != (1, 1, 1) and [i, j] not in self.arr_fon:
+                if not self.black_pixel(pixels[i, j]) and [i, j] not in self.arr_fon:
                     return [i, j]
 
     def search_clockwise(self,pixel):
@@ -64,3 +64,10 @@ class BackwardBoundaryTracing:
 
     def search_coutour_neighbour(self,pixel):
         pass  # OLES
+
+    @staticmethod
+    def black_pixel(pixel):
+        black = [(0 + i, 0 + i, 0 + i) for i in range(13)]
+        return pixel in black
+
+    # зберігати ключ пікселя, доробити пошук
