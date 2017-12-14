@@ -98,6 +98,3 @@ class BackwardBoundaryTracing:
     @staticmethod
     def is_grey(rgb):
         return math.sqrt(rgb[0] ** 2 + rgb[1] ** 2 + rgb[2] ** 2) < 21
-
-bb = BackwardBoundaryTracing("4.jpg")
-bb.start()
