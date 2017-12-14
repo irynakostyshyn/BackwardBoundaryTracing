@@ -6,6 +6,7 @@ You will find attached two folders: "code" and "data"
 In "data" you will find some images for testing this algo.
 
 How to test:
+Use one of the images from data/
 ```
 1.image_name = "4.jpg"
 2.bbt_test = BackwardBoundaryTracing(image_name)
