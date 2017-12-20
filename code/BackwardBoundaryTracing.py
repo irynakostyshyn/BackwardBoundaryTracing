@@ -43,13 +43,13 @@ class BackwardBoundaryTracing:
                     index = x
                     if active not in self.cont and active not in self.fone:
                         self.cont.append(active)
+                break
             else:
-                while neighbour_c != neighbour_cc:
+                while neighbour_c == neighbour_cc:
                     self.fone.append(active)
                     active = neighbour_c
                     neighbour_c = self.search_clockwise(active)
                     neighbour_cc = self.search_cclockwise(active)
-            break
 
 
     def find_start(self):
